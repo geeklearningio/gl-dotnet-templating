@@ -11,7 +11,7 @@
   "dependencies": {
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
     "mustache-netstandard": "0.1.0-rc2-0001",
-    "GeekLearning.Storage": "0.1.0-unstable0028",
+    "GeekLearning.Storage": "0.1.0-beta0001",
     "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc2-final",
     "NETStandard.Library": "1.5.0-rc2-24027"
   },

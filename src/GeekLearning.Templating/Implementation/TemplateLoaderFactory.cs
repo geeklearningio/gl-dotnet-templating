@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GeekLearning.Storage;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace GeekLearning.Templating.Implementation
 {
     public class TemplateLoaderFactory : ITemplateLoaderFactory
     {
+        private IMemoryCache memoryCache;
         private readonly IEnumerable<ITemplateProvider> providers;
 
-        public TemplateLoaderFactory(IEnumerable<ITemplateProvider> providers)
+        public TemplateLoaderFactory(IEnumerable<ITemplateProvider> providers, IMemoryCache memoryCache)
         {
             this.providers = providers;
+            this.memoryCache = memoryCache;
         }
 
         public ITemplateLoader Create(IStore store)
         {
-            return new TemplateLoader(store, providers);
+            return new TemplateLoader(store, providers, memoryCache);
         }
     }
 }
