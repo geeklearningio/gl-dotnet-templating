@@ -5,7 +5,11 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating", "src\GeekLearning.Templating\GeekLearning.Templating.xproj", "{369E8A80-AC62-4F8E-9CE3-AE5E6A35925E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.BasicSample", "src\GeekLearning.Templating.BasicSample\GeekLearning.Templating.BasicSample.xproj", "{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.BasicSample", "samples\GeekLearning.Templating.BasicSample\GeekLearning.Templating.BasicSample.xproj", "{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{E0BAC0FB-2A34-4E10-A2D2-4E587E50A47A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{432F4069-691C-498A-8017-81E41CBF0CCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +28,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{369E8A80-AC62-4F8E-9CE3-AE5E6A35925E} = {432F4069-691C-498A-8017-81E41CBF0CCD}
+		{45A8B12E-ED81-4D4B-A784-23DB221EBA6F} = {E0BAC0FB-2A34-4E10-A2D2-4E587E50A47A}
 	EndGlobalSection
 EndGlobal

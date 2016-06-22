@@ -20,7 +20,7 @@ namespace GeekLearning.Templating.Handlebars
 
         public ITemplate Compile(string templateContent)
         {
-            return new HandlebarsTemplate(templateContent);
+            return new MustacheSharpTemplate(templateContent);
         }
     }
 }
