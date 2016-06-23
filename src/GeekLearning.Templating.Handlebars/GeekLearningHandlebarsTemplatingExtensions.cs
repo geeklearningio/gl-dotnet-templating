@@ -11,7 +11,7 @@ namespace GeekLearning.Templating
     {
         public static IServiceCollection AddHandlebars(this IServiceCollection services)
         {
-            services.TryAddTransient<ITemplateProvider, Handlebars.HandlebarsTemplateProvider>();
+            services.TryAddEnumerable(ServiceDescriptor.Transient<ITemplateProvider, Handlebars.HandlebarsTemplateProvider>());
             return services;
         }
     }
