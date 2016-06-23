@@ -29,7 +29,7 @@
             services.AddMemoryCache();
             services.AddStorage().AddFileSystemStorage();
             services.Configure<StorageOptions>(Configuration.GetSection("Storage"));
-            services.AddTemplating().AddMustache();
+            services.AddTemplating().AddMustache().AddHandlebars();
 
             services.AddScoped<EmailTemplates>();
         }

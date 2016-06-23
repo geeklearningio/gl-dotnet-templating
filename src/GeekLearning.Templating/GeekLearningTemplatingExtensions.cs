@@ -15,11 +15,5 @@ namespace GeekLearning.Templating
             //services.TryAddTransient<ITemplateProvider, Handlebars.HandlebarsTemplateProvider>();
             return services;
         }
-
-        public static IServiceCollection AddMustache(this IServiceCollection services)
-        {
-            services.TryAddTransient<ITemplateProvider, Handlebars.MustacheSharpTemplateProvider>();
-            return services;
-        }
     }
 }
