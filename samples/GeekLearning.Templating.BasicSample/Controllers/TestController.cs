@@ -17,8 +17,8 @@ namespace GeekLearning.Templating.BasicSample.Controllers
         }
 
         // POST api/values
-        [HttpPost]
-        public async Task<string> Post([FromBody]InvitationContext value)
+        [HttpGet]
+        public async Task<string> Post([FromQuery]InvitationContext value)
         {
             try
             {

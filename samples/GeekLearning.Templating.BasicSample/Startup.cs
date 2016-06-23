@@ -27,7 +27,7 @@
             // Add framework services.
             services.AddMvc();
             services.AddMemoryCache();
-            services.AddStorage().AddFileSystemStorage();
+            services.AddStorage().AddFileSystemStorage().AddAzureStorage();
             services.Configure<StorageOptions>(Configuration.GetSection("Storage"));
             services.AddTemplating().AddMustache();
 

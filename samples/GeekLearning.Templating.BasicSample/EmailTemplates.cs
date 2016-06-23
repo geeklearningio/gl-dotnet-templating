@@ -15,7 +15,7 @@ namespace GeekLearning.Templating.BasicSample
 
         public Task<string> ApplyInvitationTemplate(InvitationContext context)
         {
-            return this.LoadAndApplyTemplate("invitation.hbs", context);
+            return this.LoadAndApplyTemplate("invitation", context);
         }
     }
 }
