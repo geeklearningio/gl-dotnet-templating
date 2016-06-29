@@ -9,5 +9,7 @@ namespace GeekLearning.Templating
     public interface ITemplateLoaderFactory
     {
         ITemplateLoader Create(IStore store);
+
+        ITemplateLoader Create(IStore store, string scope);
     }
 }

@@ -7,7 +7,7 @@ namespace GeekLearning.Templating
 {
     public interface ITemplateProvider
     {
-        ITemplate Compile(string templateContent);
+        ITemplateProviderScope CreateScope();
 
         ISet<string> MimeTypes { get; }
         ISet<string> Extensions { get; }
