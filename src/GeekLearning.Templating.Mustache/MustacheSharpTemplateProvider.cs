@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Memory;
-using GeekLearning.Storage;
-
-namespace GeekLearning.Templating.Handlebars
+﻿namespace GeekLearning.Templating.Mustache
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.Extensions.Caching.Memory;
+    using GeekLearning.Storage;
+
     public class MustacheSharpTemplateProvider : ITemplateProvider
     {
         public MustacheSharpTemplateProvider()
         {
             this.MimeTypes = new HashSet<string>() { "text/x-mustache-template" };
-            this.Extensions = new HashSet<string>() { ".hbs" };
+            this.Extensions = new HashSet<string>() { ".mustache" };
         }
 
         public ISet<string> MimeTypes { get; }

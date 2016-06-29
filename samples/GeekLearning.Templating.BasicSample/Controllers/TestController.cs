@@ -29,5 +29,19 @@ namespace GeekLearning.Templating.BasicSample.Controllers
                 return ice.InnerException.Message;
             }
         }
+
+        // POST api/values
+        [HttpGet("2")]
+        public async Task<string> Post2([FromQuery]InvitationContext value)
+        {
+            try
+            {
+                return await templates.ApplyInvitation2Template(value);
+            }
+            catch (InvalidContextException ice)
+            {
+                return ice.InnerException.Message;
+            }
+        }
     }
 }

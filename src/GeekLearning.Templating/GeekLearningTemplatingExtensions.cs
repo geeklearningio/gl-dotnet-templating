@@ -11,14 +11,7 @@ namespace GeekLearning.Templating
     {
         public static IServiceCollection AddTemplating(this IServiceCollection services)
         {
-            services.TryAddTransient<ITemplateLoaderFactory, Implementation.TemplateLoaderFactory>();
-            //services.TryAddTransient<ITemplateProvider, Handlebars.HandlebarsTemplateProvider>();
-            return services;
-        }
-
-        public static IServiceCollection AddMustache(this IServiceCollection services)
-        {
-            services.TryAddTransient<ITemplateProvider, Handlebars.MustacheSharpTemplateProvider>();
+            services.TryAddTransient<ITemplateLoaderFactory, Internal.TemplateLoaderFactory>();
             return services;
         }
     }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using GeekLearning.Storage;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace GeekLearning.Templating.Implementation
+namespace GeekLearning.Templating.Internal
 {
     public class TemplateLoaderFactory : ITemplateLoaderFactory
     {
