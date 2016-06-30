@@ -9,23 +9,20 @@
   },
 
   "dependencies": {
+    "NETStandard.Library": "1.5.0-rc2-24027",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
-    "mustache-netstandard": "0.1.0-rc2-0001",
-    "GeekLearning.Storage": "0.2.0-beta0001",
     "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc2-final",
-    "NETStandard.Library": "1.5.0-rc2-24027"
+    "GeekLearning.Storage": "0.2.0"
   },
+
   "frameworks": {
-    "net451": {
-    },
+    "net451": { },
     "netstandard1.5": {
-      "dependencies": {
-        "Microsoft.CSharp": "4.0.1-rc2-24027",
-        "System.Collections": "4.0.11-rc2-24027",
-        "System.Linq": "4.1.0-rc2-24027",
-        "System.Runtime": "4.1.0-rc2-24027",
-        "System.Threading": "4.0.11-rc2-24027"
-      }
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
     }
   }
 }

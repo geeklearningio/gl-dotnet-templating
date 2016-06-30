@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-
-namespace GeekLearning.Templating
+﻿namespace GeekLearning.Templating
 {
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+
     public static class GeekLearningTemplatingExtensions
     {
         public static IServiceCollection AddTemplating(this IServiceCollection services)
