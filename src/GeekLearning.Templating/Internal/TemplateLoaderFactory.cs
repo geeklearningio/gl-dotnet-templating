@@ -17,7 +17,12 @@
 
         public ITemplateLoader Create(IStore store)
         {
-            return new TemplateLoader(store, providers, memoryCache);
+            return new TemplateLoader(store, providers, memoryCache, null);
+        }
+
+        public ITemplateLoader Create(IStore store, string scope)
+        {
+            return new TemplateLoader(store, providers, memoryCache, scope);
         }
     }
 }

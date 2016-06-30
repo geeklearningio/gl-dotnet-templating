@@ -1,8 +1,9 @@
 ﻿namespace GeekLearning.Templating.Mustache
 {
+    using System;
     using System.Collections.Generic;
 
-    public class MustacheSharpTemplateProvider : ITemplateProvider
+    public class MustacheSharpTemplateProvider : ITemplateProvider, ITemplateProviderScope
     {
         public MustacheSharpTemplateProvider()
         {
@@ -17,6 +18,16 @@
         public ITemplate Compile(string templateContent)
         {
             return new MustacheSharpTemplate(templateContent);
+        }
+
+        public ITemplateProviderScope CreateScope()
+        {
+            return this;
+        }
+
+        public void RegisterPartial(string name, string template)
+        {
+            throw new NotSupportedException();
         }
     }
 }

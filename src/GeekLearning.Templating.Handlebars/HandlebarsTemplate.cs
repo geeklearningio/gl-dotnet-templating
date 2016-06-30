@@ -13,6 +13,11 @@
             this.compiledTemplate = Handlebars.Compile(templateContent);
         }
 
+        public HandlebarsTemplate(IHandlebars handlebars, string templateContent)
+        {
+            this.compiledTemplate = handlebars.Compile(templateContent);
+        }
+
         public string Apply(object context)
         {
             try
