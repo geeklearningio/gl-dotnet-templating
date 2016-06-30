@@ -2,10 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.Extensions.Caching.Memory;
-    using GeekLearning.Storage;
 
     public class MustacheSharpTemplateProvider : ITemplateProvider, ITemplateProviderScope
     {
@@ -16,6 +12,7 @@
         }
 
         public ISet<string> MimeTypes { get; }
+
         public ISet<string> Extensions { get; }
 
         public ITemplate Compile(string templateContent)

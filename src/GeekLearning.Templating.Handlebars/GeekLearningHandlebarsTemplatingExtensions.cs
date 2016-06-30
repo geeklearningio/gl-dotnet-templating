@@ -1,12 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GeekLearning.Templating
+﻿namespace GeekLearning.Templating
 {
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+
     public static class GeekLearningHandlebarsTemplatingExtensions
     {
         public static IServiceCollection AddHandlebars(this IServiceCollection services)

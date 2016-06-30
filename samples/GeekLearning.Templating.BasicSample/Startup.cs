@@ -1,12 +1,12 @@
 ﻿namespace GeekLearning.Templating.BasicSample
 {
-    using Microsoft.Extensions.Options;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
-    using GeekLearning.Storage;
+    using Storage;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Builder;
+
     public class Startup
     {
         public Startup(IHostingEnvironment env)

@@ -1,11 +1,7 @@
-﻿using GeekLearning.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GeekLearning.Templating
+﻿namespace GeekLearning.Templating
 {
+    using Storage;
+
     public interface ITemplateLoaderFactory
     {
         ITemplateLoader Create(IStore store);

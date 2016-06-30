@@ -1,11 +1,8 @@
-﻿using GeekLearning.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GeekLearning.Templating
+﻿namespace GeekLearning.Templating
 {
+    using Storage;
+    using System.Threading.Tasks;
+
     public abstract class TemplateCollectionBase
     {
         public TemplateCollectionBase(string storeName, IStorageFactory storageFactory, ITemplateLoaderFactory templateLoaderFactory)

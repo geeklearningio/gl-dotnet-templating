@@ -15,6 +15,15 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.Han
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.Mustache", "src\GeekLearning.Templating.Mustache\GeekLearning.Templating.Mustache.xproj", "{515925E3-4359-4079-A24C-E7367560C95F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A75429E6-34A4-43EC-AA7E-6DD4FFAF8704}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

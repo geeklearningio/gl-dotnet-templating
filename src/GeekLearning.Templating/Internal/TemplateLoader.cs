@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GeekLearning.Storage;
-using Microsoft.Extensions.Caching.Memory;
-
-namespace GeekLearning.Templating.Internal
+﻿namespace GeekLearning.Templating.Internal
 {
+    using Storage;
+    using Microsoft.Extensions.Caching.Memory;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System;
+
     public class TemplateLoader : ITemplateLoader
     {
         private IMemoryCache memoryCache;
