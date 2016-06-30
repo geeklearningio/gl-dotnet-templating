@@ -5,7 +5,24 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating", "src\GeekLearning.Templating\GeekLearning.Templating.xproj", "{369E8A80-AC62-4F8E-9CE3-AE5E6A35925E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.BasicSample", "src\GeekLearning.Templating.BasicSample\GeekLearning.Templating.BasicSample.xproj", "{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.BasicSample", "samples\GeekLearning.Templating.BasicSample\GeekLearning.Templating.BasicSample.xproj", "{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{E0BAC0FB-2A34-4E10-A2D2-4E587E50A47A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{432F4069-691C-498A-8017-81E41CBF0CCD}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.Handlebars", "src\GeekLearning.Templating.Handlebars\GeekLearning.Templating.Handlebars.xproj", "{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.Mustache", "src\GeekLearning.Templating.Mustache\GeekLearning.Templating.Mustache.xproj", "{515925E3-4359-4079-A24C-E7367560C95F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A75429E6-34A4-43EC-AA7E-6DD4FFAF8704}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +38,22 @@ Global
 		{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515925E3-4359-4079-A24C-E7367560C95F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515925E3-4359-4079-A24C-E7367560C95F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515925E3-4359-4079-A24C-E7367560C95F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515925E3-4359-4079-A24C-E7367560C95F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{369E8A80-AC62-4F8E-9CE3-AE5E6A35925E} = {432F4069-691C-498A-8017-81E41CBF0CCD}
+		{45A8B12E-ED81-4D4B-A784-23DB221EBA6F} = {E0BAC0FB-2A34-4E10-A2D2-4E587E50A47A}
+		{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D} = {432F4069-691C-498A-8017-81E41CBF0CCD}
+		{515925E3-4359-4079-A24C-E7367560C95F} = {432F4069-691C-498A-8017-81E41CBF0CCD}
 	EndGlobalSection
 EndGlobal

@@ -1,11 +1,9 @@
-﻿using Mustache;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GeekLearning.Templating.Handlebars
+﻿namespace GeekLearning.Templating.Mustache
 {
+    using global::Mustache;
+    using System;
+    using System.Collections.Generic;
+
     public class MustacheSharpTemplate : ITemplate
     {
         private Generator compiledTemplate;

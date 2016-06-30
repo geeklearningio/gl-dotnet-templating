@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Memory;
-using GeekLearning.Storage;
-
-namespace GeekLearning.Templating.Handlebars
+﻿namespace GeekLearning.Templating.Handlebars
 {
+    using System.Collections.Generic;
+
     public class HandlebarsTemplateProvider: ITemplateProvider
     {
         public HandlebarsTemplateProvider()
@@ -16,6 +11,7 @@ namespace GeekLearning.Templating.Handlebars
         }
 
         public ISet<string> MimeTypes { get; }
+
         public ISet<string> Extensions { get; }
 
         public ITemplate Compile(string templateContent)

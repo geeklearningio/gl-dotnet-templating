@@ -1,27 +1,23 @@
-﻿using Mustache;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GeekLearning.Templating.Handlebars
+﻿namespace GeekLearning.Templating.Handlebars
 {
+    using HandlebarsDotNet;
+    using System;
+    using System.Collections.Generic;
+
     public class HandlebarsTemplate : ITemplate
     {
-        private Generator compiledTemplate;
+        private Func<object, string> compiledTemplate;
 
         public HandlebarsTemplate(string templateContent)
         {
-            FormatCompiler compiler = new FormatCompiler();
-
-            this.compiledTemplate = compiler.Compile(templateContent);
+            this.compiledTemplate = Handlebars.Compile(templateContent);
         }
 
         public string Apply(object context)
         {
             try
             {
-                return this.compiledTemplate.Render(context);
+                return this.compiledTemplate(context);
             }
             catch (KeyNotFoundException ex)
             {
@@ -33,7 +29,7 @@ namespace GeekLearning.Templating.Handlebars
         {
             try
             {
-                return this.compiledTemplate.Render(formatProvider, context);
+                return this.compiledTemplate(formatProvider);
             }
             catch(KeyNotFoundException ex)
             {

@@ -14,8 +14,11 @@
     "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
-    "GeekLearning.Storage.FileSystem": "0.1.0-unstable0028",
-    "GeekLearning.Templating": "*"
+    "GeekLearning.Storage.FileSystem": "0.2.0",
+    "GeekLearning.Storage.Azure": "0.2.0",
+    "GeekLearning.Templating": "*",
+    "GeekLearning.Templating.Handlebars": "*",
+    "GeekLearning.Templating.Mustache": "*"
   },
 
   "tools": {
