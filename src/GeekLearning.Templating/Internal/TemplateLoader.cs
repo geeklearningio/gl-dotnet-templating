@@ -26,30 +26,44 @@
         {
             return await this.memoryCache.GetOrCreateAsync($"x_tmpl_{name}", async entry =>
             {
+                string directory;
+                string file;
+                var lastSlash = name.LastIndexOf('/');
+                if (lastSlash < 0)
+                {
+                    directory = "";
+                    file = name;
+                }
+                else
+                {
+                    directory = name.Substring(0, lastSlash);
+                    file = name.Substring(lastSlash + 1);
+                }
                 entry.SetPriority(CacheItemPriority.High);
-                var fileName = (await this.store.List($"{name}.*")).First();
-                var provider = this.providers.First(x => x.Extensions.Any(ext => fileName.EndsWith(ext)));
+                var fileReference = (await this.store.ListAsync(directory, $"{file}.*")).First();
+                var provider = this.providers.First(x => x.Extensions.Any(ext => fileReference.Path.EndsWith(ext)));
 
-                var scope = await GetScope(provider, name.Substring(Math.Max(0, name.LastIndexOf('/'))));
+                var scope = await GetScope(provider, directory);
 
-                return scope.Compile(await this.store.ReadAllText(fileName));
+                return scope.Compile(await this.store.ReadAllTextAsync(fileReference));
             });
         }
 
         private async Task<ITemplateProviderScope> GetScope(ITemplateProvider provider, string name)
         {
-            return await this.memoryCache.GetOrCreateAsync($"x_tmpl_inf_scopes_{provider.Extensions.First()}_{name}", async entry => {
+            return await this.memoryCache.GetOrCreateAsync($"x_tmpl_inf_scopes_{provider.Extensions.First()}_{name}", async entry =>
+            {
                 entry.SetPriority(CacheItemPriority.High);
                 var scope = provider.CreateScope();
-                var files = await this.store.List(name);
+                var files = await this.store.ListAsync(name, "_*.*");
                 foreach (var file in files)
                 {
-                    var path = file.Split('/');
+                    var path = file.Path.Split('/');
                     var fileName = path.Last();
-                    if (fileName.StartsWith("_") && provider.Extensions.Any(ext=> fileName.EndsWith(ext)))
+                    if (fileName.StartsWith("_") && provider.Extensions.Any(ext => fileName.EndsWith(ext)))
                     {
                         var partialName = System.IO.Path.GetFileNameWithoutExtension(fileName.Substring(1));
-                        scope.RegisterPartial(partialName, await this.store.ReadAllText(file));
+                        scope.RegisterPartial(partialName, await this.store.ReadAllTextAsync(file));
                     }
                 }
                 return scope;

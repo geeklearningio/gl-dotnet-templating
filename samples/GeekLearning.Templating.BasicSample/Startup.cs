@@ -17,9 +17,11 @@
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            this.HostingEnvironment = env;
         }
 
         public IConfigurationRoot Configuration { get; }
+        public IHostingEnvironment HostingEnvironment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -27,7 +29,7 @@
             // Add framework services.
             services.AddMvc();
             services.AddMemoryCache();
-            services.AddStorage().AddFileSystemStorage().AddAzureStorage();
+            services.AddStorage().AddFileSystemStorage(HostingEnvironment.ContentRootPath).AddAzureStorage();
             services.Configure<StorageOptions>(Configuration.GetSection("Storage"));
             services.AddTemplating().AddMustache().AddHandlebars();
 
