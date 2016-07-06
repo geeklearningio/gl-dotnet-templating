@@ -22,9 +22,9 @@
             //this.scope = memoryCache.GetOrCreateAsync("x_tmpl_inf_scopes", async entry => { })
         }
 
-        public async Task<ITemplate> GetTemplate(string name)
+        public Task<ITemplate> GetTemplate(string name)
         {
-            return await this.memoryCache.GetOrCreateAsync($"x_tmpl_{name}", async entry =>
+            return this.memoryCache.GetOrCreateAsync($"x_tmpl_{this.store.Name}_{name}", async entry =>
             {
                 string directory;
                 string file;
@@ -49,9 +49,9 @@
             });
         }
 
-        private async Task<ITemplateProviderScope> GetScope(ITemplateProvider provider, string name)
+        private Task<ITemplateProviderScope> GetScope(ITemplateProvider provider, string name)
         {
-            return await this.memoryCache.GetOrCreateAsync($"x_tmpl_inf_scopes_{provider.Extensions.First()}_{name}", async entry =>
+            return this.memoryCache.GetOrCreateAsync($"x_tmpl_{this.store.Name}_inf_scopes_{provider.Extensions.First()}_{name}", async entry =>
             {
                 entry.SetPriority(CacheItemPriority.High);
                 var scope = provider.CreateScope();
