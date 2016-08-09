@@ -22,5 +22,10 @@ namespace GeekLearning.Templating.BasicSample
         {
             return this.LoadAndApplyTemplate("invitation2", context);
         }
+
+        public Task<string> ApplyInvitation3Template(InvitationContext context)
+        {
+            return this.LoadAndApplyTemplate("SubDir/invitation", context);
+        }
     }
 }
