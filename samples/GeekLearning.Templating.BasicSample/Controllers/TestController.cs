@@ -18,7 +18,7 @@ namespace GeekLearning.Templating.BasicSample.Controllers
 
         // POST api/values
         [HttpGet]
-        public async Task<string> Post([FromQuery]InvitationContext value)
+        public async Task<string> Get([FromQuery]InvitationContext value)
         {
             try
             {
@@ -32,11 +32,24 @@ namespace GeekLearning.Templating.BasicSample.Controllers
 
         // POST api/values
         [HttpGet("2")]
-        public async Task<string> Post2([FromQuery]InvitationContext value)
+        public async Task<string> Get2([FromQuery]InvitationContext value)
         {
             try
             {
                 return await templates.ApplyInvitation2Template(value);
+            }
+            catch (InvalidContextException ice)
+            {
+                return ice.InnerException.Message;
+            }
+        }
+
+        [HttpGet("3")]
+        public async Task<string> Get3([FromQuery]InvitationContext value)
+        {
+            try
+            {
+                return await templates.ApplyInvitation3Template(value);
             }
             catch (InvalidContextException ice)
             {

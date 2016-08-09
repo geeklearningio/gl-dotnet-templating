@@ -4,7 +4,7 @@
 
     public interface ITemplateProvider
     {
-        ITemplate Compile(string templateContent);
+        ITemplateProviderScope CreateScope();
 
         ISet<string> MimeTypes { get; }
 
