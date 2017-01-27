@@ -15,8 +15,8 @@
     "Microsoft.Extensions.Logging.Console": "1.1.0",
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
 
-    "GeekLearning.Storage.FileSystem": "0.5.0",
-    "GeekLearning.Storage.Azure": "0.5.0",
+    "GeekLearning.Storage.FileSystem": "0.6.0-*",
+    "GeekLearning.Storage.Azure": "0.6.0-*",
     
     "GeekLearning.Templating": "*",
     "GeekLearning.Templating.Handlebars": "*",

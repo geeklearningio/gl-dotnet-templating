@@ -12,12 +12,11 @@
     "NETStandard.Library": "1.6.1",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
     "Microsoft.Extensions.Caching.Abstractions": "1.1.0",
-    "GeekLearning.Storage": "0.5.0"
+    "GeekLearning.Storage": "0.6.0-*"
   },
 
   "frameworks": {
-    "net451": { },
-    "netstandard1.5": {
+    "netstandard1.1": {
       "imports": [
         "dotnet5.6",
         "portable-net45+win8"
