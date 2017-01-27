@@ -9,15 +9,14 @@
   },
 
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
-    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0",
-    "mustache-netstandard": "0.1.0-rtm-0001",
+    "NETStandard.Library": "1.6.1",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+    "mustache-netstandard": "0.1.1",
     "GeekLearning.Templating": "*"
   },
 
   "frameworks": {
-    "net451": { },
-    "netstandard1.5": {
+    "netstandard1.1": {
       "imports": [
         "dotnet5.6",
         "portable-net45+win8"
