@@ -9,10 +9,10 @@
   },
 
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
-    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0",
-    "Microsoft.Extensions.Caching.Abstractions": "1.0.0",
-    "GeekLearning.Storage": "0.4.*"
+    "NETStandard.Library": "1.6.1",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+    "Microsoft.Extensions.Caching.Abstractions": "1.1.0",
+    "GeekLearning.Storage": "0.5.0"
   },
 
   "frameworks": {
