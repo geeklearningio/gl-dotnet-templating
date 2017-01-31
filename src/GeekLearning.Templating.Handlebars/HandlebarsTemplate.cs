@@ -36,7 +36,7 @@
             {
                 return this.compiledTemplate(formatProvider);
             }
-            catch(KeyNotFoundException ex)
+            catch (KeyNotFoundException ex)
             {
                 throw new InvalidContextException(ex);
             }

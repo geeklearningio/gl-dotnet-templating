@@ -1,9 +1,9 @@
 ﻿{
-  "version": "1.0.0-*",
-  "description": "Templating with mustache.js",
+  "version": "0.0.1-*",
+  "description": "Mustache.js Provider for Geek Learning Templating Abstractions.",
   "authors": [ "Geek Learning", "Cyprien Autexier", "Adrien Siffermann" ],
   "packOptions": {
-    "tags": [ ],
+    "tags": [],
     "projectUrl": "",
     "licenseUrl": ""
   },
@@ -11,16 +11,13 @@
   "dependencies": {
     "NETStandard.Library": "1.6.1",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+
     "mustache-netstandard": "0.1.1",
+
     "GeekLearning.Templating": "*"
   },
 
   "frameworks": {
-    "netstandard1.1": {
-      "imports": [
-        "dotnet5.6",
-        "portable-net45+win8"
-      ]
-    }
+    "netstandard1.1": {}
   }
 }

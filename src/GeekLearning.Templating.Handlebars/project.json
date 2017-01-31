@@ -1,9 +1,9 @@
 ﻿{
-  "version": "1.0.0-*",
-  "description": "Templating with Handlebars",
+  "version": "0.0.1-*",
+  "description": "Handlebars Provider for Geek Learning Templating Abstractions.",
   "authors": [ "Geek Learning", "Cyprien Autexier", "Adrien Siffermann" ],
   "packOptions": {
-    "tags": [ ],
+    "tags": [],
     "projectUrl": "",
     "licenseUrl": ""
   },
@@ -11,17 +11,14 @@
   "dependencies": {
     "NETStandard.Library": "1.6.1",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+
     "Handlebars.Net": "1.8.0",
+    
     "GeekLearning.Templating": "*"
   },
 
   "frameworks": {
-    "net451": { },
-    "netstandard1.5": {
-      "imports": [
-        "dotnet5.6",
-        "portable-net45+win8"
-      ]
-    }
+    "net45": {},
+    "netstandard1.5": {}
   }
 }
