@@ -12,7 +12,7 @@
     "NETStandard.Library": "1.6.1",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
 
-    "Handlebars.Net": "1.8.0",
+    "Handlebars.NetStandard": "1.8.1",
     
     "GeekLearning.Templating": "*"
   },
