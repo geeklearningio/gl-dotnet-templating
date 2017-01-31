@@ -32,7 +32,7 @@
 
             public Scope()
             {
-                this.handlebars = HandlebarsDotNet.Handlebars.Create();
+                this.handlebars = Handlebars.Create();
             }
 
             public ITemplate Compile(string templateContent)

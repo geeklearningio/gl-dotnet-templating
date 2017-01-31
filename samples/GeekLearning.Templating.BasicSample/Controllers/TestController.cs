@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-namespace GeekLearning.Templating.BasicSample.Controllers
+﻿namespace GeekLearning.Templating.BasicSample.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using System.Threading.Tasks;
+
     [Route("api/[controller]")]
     public class TestController : Controller
     {
@@ -16,7 +13,6 @@ namespace GeekLearning.Templating.BasicSample.Controllers
             this.templates = templates;
         }
 
-        // POST api/values
         [HttpGet]
         public async Task<string> Get([FromQuery]InvitationContext value)
         {
@@ -30,7 +26,6 @@ namespace GeekLearning.Templating.BasicSample.Controllers
             }
         }
 
-        // POST api/values
         [HttpGet("2")]
         public async Task<string> Get2([FromQuery]InvitationContext value)
         {

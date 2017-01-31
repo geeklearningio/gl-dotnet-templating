@@ -33,7 +33,7 @@
             {
                 return this.compiledTemplate.Render(formatProvider, context);
             }
-            catch(KeyNotFoundException ex)
+            catch (KeyNotFoundException ex)
             {
                 throw new InvalidContextException(ex);
             }
