@@ -40,12 +40,19 @@
                 }
 
                 entry.SetPriority(CacheItemPriority.High);
-                var fileReference = (await this.store.ListAsync(directory, $"{file}.*")).First();
-                var provider = this.providers.First(x => x.Extensions.Any(ext => fileReference.Path.EndsWith(ext)));
+                var fileReferences = (await this.store.ListAsync(directory, $"{file}.*"));
 
-                var scope = await GetScope(provider, directory);
+                foreach (var fileReference in fileReferences)
+                {
+                    var provider = this.providers.FirstOrDefault(x => x.Extensions.Any(ext => fileReference.Path.EndsWith(ext)));
+                    if (provider != null)
+                    {
+                        var scope = await GetScope(provider, directory);
+                        return scope.Compile(await this.store.ReadAllTextAsync(fileReference));
+                    }
+                }
 
-                return scope.Compile(await this.store.ReadAllTextAsync(fileReference));
+                throw new TemplateNotFoundException(name);
             });
         }
 
