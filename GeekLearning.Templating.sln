@@ -1,19 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating", "src\GeekLearning.Templating\GeekLearning.Templating.xproj", "{369E8A80-AC62-4F8E-9CE3-AE5E6A35925E}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.BasicSample", "samples\GeekLearning.Templating.BasicSample\GeekLearning.Templating.BasicSample.xproj", "{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{E0BAC0FB-2A34-4E10-A2D2-4E587E50A47A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{432F4069-691C-498A-8017-81E41CBF0CCD}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.Handlebars", "src\GeekLearning.Templating.Handlebars\GeekLearning.Templating.Handlebars.xproj", "{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GeekLearning.Templating.Mustache", "src\GeekLearning.Templating.Mustache\GeekLearning.Templating.Mustache.xproj", "{515925E3-4359-4079-A24C-E7367560C95F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{A75429E6-34A4-43EC-AA7E-6DD4FFAF8704}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,6 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{A75429E6
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekLearning.Templating", "src\GeekLearning.Templating\GeekLearning.Templating.csproj", "{369E8A80-AC62-4F8E-9CE3-AE5E6A35925E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekLearning.Templating.BasicSample", "samples\GeekLearning.Templating.BasicSample\GeekLearning.Templating.BasicSample.csproj", "{45A8B12E-ED81-4D4B-A784-23DB221EBA6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekLearning.Templating.Handlebars", "src\GeekLearning.Templating.Handlebars\GeekLearning.Templating.Handlebars.csproj", "{E72256FA-DFF3-4487-AA94-E6D5BD1BDD2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekLearning.Templating.Mustache", "src\GeekLearning.Templating.Mustache\GeekLearning.Templating.Mustache.csproj", "{515925E3-4359-4079-A24C-E7367560C95F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
