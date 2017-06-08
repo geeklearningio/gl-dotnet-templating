@@ -1,5 +1,6 @@
 ﻿namespace GeekLearning.Templating.BasicSample
 {
+    using GeekLearning.Storage.Configuration;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -28,8 +29,8 @@
         {
             services.AddMvc();
             services.AddMemoryCache();
-            services.AddStorage().AddFileSystemStorage(HostingEnvironment.ContentRootPath).AddAzureStorage();
-            services.Configure<StorageOptions>(Configuration.GetSection("Storage"));
+            services.AddStorage(this.Configuration).AddFileSystemStorage(HostingEnvironment.ContentRootPath).AddAzureStorage();
+
             services.AddTemplating().AddMustache().AddHandlebars();
 
             services.AddScoped<EmailTemplates>();

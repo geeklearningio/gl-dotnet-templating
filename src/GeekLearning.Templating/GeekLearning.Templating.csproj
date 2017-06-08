@@ -13,7 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="1.1.2" />
-    <PackageReference Include="GeekLearning.Storage" Version="0.6.0" />
+    <PackageReference Include="GeekLearning.Storage" Version="0.7.0-alpha0026" />
   </ItemGroup>
 
   <ItemGroup>
