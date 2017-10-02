@@ -3,7 +3,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.DependencyInjection.Extensions;
 
-    public static class GeekLearningTemplatingExtensions
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddTemplating(this IServiceCollection services)
         {

@@ -1,11 +1,10 @@
 ﻿namespace GeekLearning.Templating.Internal
 {
-    using Storage;
     using Microsoft.Extensions.Caching.Memory;
+    using Storage;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using System;
 
     public class TemplateLoader : ITemplateLoader
     {
@@ -39,6 +38,7 @@
                     directory = name.Substring(0, lastSlash);
                     file = name.Substring(lastSlash + 1);
                 }
+
                 entry.SetPriority(CacheItemPriority.High);
                 var fileReference = (await this.store.ListAsync(directory, $"{file}.*")).First();
                 var provider = this.providers.First(x => x.Extensions.Any(ext => fileReference.Path.EndsWith(ext)));
@@ -66,6 +66,7 @@
                         scope.RegisterPartial(partialName, await this.store.ReadAllTextAsync(file));
                     }
                 }
+
                 return scope;
             });
         }

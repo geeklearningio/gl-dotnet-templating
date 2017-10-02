@@ -2,9 +2,9 @@
 {
     using System;
 
-    public class InvalidContextException: Exception
+    public class InvalidContextException : Exception
     {
-        public InvalidContextException(Exception innerException): base("Invalid template generation context.", innerException)
+        public InvalidContextException(Exception innerException) : base("Invalid template generation context.", innerException)
         {
         }
     }

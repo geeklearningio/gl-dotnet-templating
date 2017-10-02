@@ -1,7 +1,7 @@
 ﻿namespace GeekLearning.Templating.Internal
 {
-    using Storage;
     using Microsoft.Extensions.Caching.Memory;
+    using Storage;
     using System.Collections.Generic;
 
     public class TemplateLoaderFactory : ITemplateLoaderFactory

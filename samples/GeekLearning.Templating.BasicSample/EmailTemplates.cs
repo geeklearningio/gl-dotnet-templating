@@ -1,16 +1,12 @@
-﻿using GeekLearning.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GeekLearning.Templating.BasicSample
+﻿namespace GeekLearning.Templating.BasicSample
 {
+    using Storage;
+    using System.Threading.Tasks;
+
     public class EmailTemplates : TemplateCollectionBase
     {
         public EmailTemplates(IStorageFactory storageFactory, ITemplateLoaderFactory templateLoaderFactory) : base("Templates", storageFactory, templateLoaderFactory)
         {
-
         }
 
         public Task<string> ApplyInvitationTemplate(InvitationContext context)

@@ -1,6 +1,7 @@
 ﻿namespace GeekLearning.Templating.Handlebars
 {
     using HandlebarsDotNet;
+    using System;
     using System.Collections.Generic;
     using System.IO;
 
@@ -32,7 +33,45 @@
 
             public Scope()
             {
-                this.handlebars = HandlebarsDotNet.Handlebars.Create();
+                this.handlebars = Handlebars.Create();
+
+                this.handlebars.RegisterHelper("format", (writer, context, arguments) =>
+                {
+                    if (arguments.Length <= 1)
+                    {
+                        return;
+                    }
+
+                    var format = "";
+                    if (arguments.Length > 1)
+                    {
+                        format = arguments[1] as string ?? "";
+                    }
+
+                    var culture = System.Globalization.CultureInfo.InvariantCulture;
+                    if (arguments.Length > 2)
+                    {
+                        var cultureName = arguments[2] as string;
+                        if (!string.IsNullOrEmpty(cultureName))
+                        {
+                            culture = new System.Globalization.CultureInfo(cultureName);
+                        }
+                    }
+
+                    var date = arguments[0] as DateTime?;
+                    if (date.HasValue)
+                    {
+                        writer.WriteSafeString(date.Value.ToString(format, culture));
+                        return;
+                    }
+
+                    var number = arguments[0] as decimal?;
+                    if (number.HasValue)
+                    {
+                        writer.WriteSafeString(number.Value.ToString(format, culture));
+                        return;
+                    }
+                });
             }
 
             public ITemplate Compile(string templateContent)
