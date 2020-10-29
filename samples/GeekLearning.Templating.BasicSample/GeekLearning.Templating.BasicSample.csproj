@@ -31,8 +31,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
-    <PackageReference Include="GeekLearning.Storage.FileSystem" Version="0.8.0-alpha0003" />
-    <PackageReference Include="GeekLearning.Storage.Azure" Version="0.8.0-alpha0003" />
+    <PackageReference Include="GeekLearning.Storage.FileSystem" Version="0.8.0" />
+    <PackageReference Include="GeekLearning.Storage.Azure" Version="0.8.0" />
   </ItemGroup>
 
 </Project>
